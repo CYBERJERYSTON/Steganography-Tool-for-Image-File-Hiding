@@ -1,40 +1,3 @@
-"""
-Steg-ui: Steganography tool with GUI *and* CLI fallback
-
-This single-file tool embeds/extracts arbitrary bytes (text or files) into images using
-LSB steganography. It prefers a tkinter GUI when available, but **if tkinter is not
-installed / supported**, it falls back to a full-featured command-line interface so the
-script remains usable in headless or minimal environments.
-
-Features
-- Embed text or arbitrary file bytes into images using the LSB of RGB channels.
-- Optional AES-256-GCM encryption (requires pycryptodome).
-- Supports PNG/BMP input; saves stego output as PNG (lossless).
-- GUI (tkinter) when available; otherwise a command-line mode.
-- Self-test mode that runs basic embedding/extraction checks.
-
-Dependencies
-- Python 3.8+
-- pillow (PIL)
-- pycryptodome (optional, for encryption)
-- tkinter (optional; if not present the CLI is used instead)
-
-Usage
-- GUI (if your environment has tkinter):
-    python steg-ui.py
-
-- CLI examples:
-    python steg-ui.py embed --in cover.png --out stego.png --text "secret message"
-    python steg-ui.py embed --in cover.png --out stego.png --file secret.pdf
-    python steg-ui.py extract --in stego.png --out recovered.pdf
-    python steg-ui.py capacity --in cover.png
-    python steg-ui.py selftest
-
-Notes
-- Always use lossless formats (PNG/BMP). JPEG will destroy hidden data.
-- Capacity ≈ width * height * 3 bits (one bit per RGB channel).
-
-"""
 
 from __future__ import annotations
 
@@ -656,3 +619,4 @@ if __name__ == '__main__':
     rc = main()
     # if running as script, exit with rc
     sys.exit(rc)
+
