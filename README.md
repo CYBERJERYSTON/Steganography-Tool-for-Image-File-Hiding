@@ -1,38 +1,27 @@
-# elavete-project
+# Steganography Tool for Image/File Hiding
 
-Steganography Tool for Image/File Hiding
-  ** Objective
-        Hide secret text or files inside images using steganography techniques.
-         Tools & Libraries
-        Python
-        PIL (Pillow)
-        Stepic (or custom LSB implementation)
-        Tkinter (for GUI)
+A lightweight and user-friendly Python tool for hiding and extracting text or files inside images using LSB steganography. Supports encryption and offers both a GUI and CLI for flexibility.
 
-** Mini Guide**
-Encode Phase
-Convert text or file data to binary.
-Embed binary data into the image's Least Significant Bits (LSB).
-Optionally encrypt the message before embedding.
-GUI Features
+** Repository:**  
+[CYBERJERYSTON/Steganography-Tool-for-Image-File-Hiding](https://github.com/CYBERJERYSTON/Steganography-Tool-for-Image-File-Hiding)
 
-Drag-and-drop interface for image and file selection.
+---
 
-Support for image formats like PNG and BMP.
+##  Features
 
-Upload and preview original/modified images.
+- Hide **text** or **files** inside PNG or BMP images (lossless formats).
+- Optional **AES-256-GCM encryption** with password + PBKDF2 key derivation.
+- Dual interface:
+  - **Graphical** (Tkinter-based GUI with drag-and-drop support if available).
+  - **Command-Line** for headless environments.
+- Capacity checking: see how many bytes your image can hold.
+- Built-in **self-test** to verify embedding and extraction work properly.
 
-Decode Phase
+---
 
-Extract embedded data from image.
+##  Installation & Setup
 
-Decrypt (if applied) and display or save the hidden message/file.
-
-** Deliverable
-A fully functional desktop GUI application to:
-
-Embed text/files into images.
-
-Extract hidden content from stego-images.
-
-Ensure usability with a clean, intuitive interface.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/CYBERJERYSTON/Steganography-Tool-for-Image-File-Hiding.git
+   cd Steganography-Tool-for-Image-File-Hiding
